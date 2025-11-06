@@ -23,7 +23,7 @@ header {
 }
 
 section, .hero, .contact, .feature {
-  scroll-margin-top: 200px; /* תאם לגובה ההדר */
+  scroll-margin-top: 140px; /* תאם לגובה ההדר */
 }
 
 
@@ -51,11 +51,11 @@ main {
 
 .profile-image {
     position: absolute;
-    top: 65px;
+    top: 50px;
     left: 20%;
     transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #FFD700; /* זהב קלאסי */
@@ -110,6 +110,8 @@ main {
     height: 100%; /* התמונה ממלאת את גובה ה-div */
     object-fit: cover; /* מכסה את כל ה-div, תוך חיתוך אם צריך */
     object-position: center center; /* ממקם את מרכז התמונה במרכז ה-div */
+
+
 	
 }
 
@@ -123,6 +125,7 @@ main {
 }
 
 .hero-content {
+	
     max-width: 800px;
     margin: 0 auto;
 }
@@ -165,6 +168,7 @@ main {
 }
 
 .feature {
+	font-size: 1.2em;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -192,7 +196,7 @@ main {
 }
 
 .contact h2 {
-    color: #333;
+    color: #00838f;
     margin-bottom: 20px;
 }
 

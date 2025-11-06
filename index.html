@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQL3HLRTGV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQL3HLRTGV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-ZQL3HLRTGV');
-</script>
+        gtag('config', 'G-ZQL3HLRTGV');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY QA Tester</title>
+    <title>Meir Yaakovi - QA Automation Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-mobile.css" media="max-width: 768px">
     <link rel="icon" type="image/png" sizes="48x48" href="images/logo.png">
+
     <style>
+        /* CSS כללי לריספונסיביות */
         #mobile-profile-image {
-            display: none; /* מוסתר כברירת מחדל במובייל */
-        }
-        #desktop-profile-image {
-            /* סגנונות ברירת מחדל לתמונה בדסקטופ יהיו ב-style.css */
+            display: none;
         }
         @media (max-width: 768px) {
             #desktop-profile-image {
-                display: none; /* הסתר תמונה של דסקטופ במובייל */
+                display: none;
             }
             #mobile-profile-image {
-                display: block; /* הצג תמונה של מובייל במובייל */
+                display: block;
             }
             header {
-                position: fixed; /* שמור על ההדר קבוע במובייל */
+                position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -39,7 +38,7 @@
                 display: flex;
                 align-items: center;
                 height: auto !important;
-                text-align: left; /* יישר טקסט לשמאל במובייל */
+                text-align: left;
             }
             header h1 {
                 margin-left: 4rem;
@@ -60,6 +59,60 @@
                 padding-top: 6rem; /* התאם ריפוד עליון לתוכן הראשי במובייל */
             }
         }
+
+        /* *** סגנונות מודרניים לכישורים ופרויקטים (כרטיסים) *** */
+        .competencies-section {
+            max-width: 100%; 
+            margin: 0 auto;
+            padding: 0; 
+            font-family: Arial, sans-serif;
+        }
+
+        /* סגנון כללי לכותרות הרשימה */
+        .competencies-section h2 {
+            color: #333; 
+            border-bottom: 2px solid #ccc; 
+            padding-bottom: 5px;
+            margin-top: 15px; 
+        }
+        
+        .soft-skills-list, .hard-skills-list {
+            padding: 0;
+        }
+
+        /* סגנון לפריטי הרשימה */
+        .soft-skills-list li, .hard-skills-list li {
+            background: #f7f7f7;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-left: 5px solid #17a2b8; /* צבע טכני מעודכן */
+            line-height: 1.4;
+            list-style-type: none;
+        }
+
+        /* שימוש ב-Flexbox לסידור כרטיסים בשורה */
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex-basis: calc(33% - 20px); /* יצירת שלושה אלמנטים בשורה */
+            min-width: 280px; 
+        }
+
+        /* תיקון קו אופקי במדור about */
+        .about-me {
+            padding: 20px 0;
+            background-color: #f9f9f9; 
+            border-bottom: 1px solid #eee;
+        }
     </style>
 </head>
 <body id="home">
@@ -68,9 +121,9 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about-section">About</a></li> 
+                <li><a href="#skills-section">Skills</a></li> 
+                <li><a href="#projects-section">Projects</a></li> <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div id="desktop-profile-image" class="profile-image">
@@ -86,39 +139,82 @@
             <div class="hero-content">
                 <h2>The QA Tester For You</h2>
                 <p>Applying solid QA course knowledge </BR> and professional life experience to rigorously test </BR> and improve product integrity in an entry-level role.</p>
-                <a href="#" class="button">Learn More</a>
             </div>
         </section>
 
-        <section class="features">
-            <h2>My Advantages</h2>
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Hard Skills</h3>
-                    <p>- - - List</p>
-                </div>
-                <div class="feature">
-                    <h3>Soft Skills</h3>
-                    <p>- - - List</p>
-                </div>
-                <div class="feature">
-                    <h3>Projects:</h3>	
-                    <p>- - - List</p>
-                </div>
+        <section id="about-section" class="feature">
+    <div class="hero-content">
+        <h3><center>About Me & Motivation</center></h2>
+        <p>
+            🚀 **Passionate QA Engineer** with strong motivation and unstoppable energy 💪.
+			<br>I am currently focusing on mastering **Python** for test automation.<br>
             
-			
-			</div>
-			
+            🎓 Graduate of
+            <a href="https://www.automation.co.il/" target="_blank" rel="noopener noreferrer" style="color: #00838f; font-weight: bold;">
+                Automation College - Gal Matalon
+            </a> 🎖️.
+            <br>
+            Skilled in both Manual 🖊 and Automation ⚙️ Testing.
+        </p>
+        
+        <h3>💡 Core Competencies:</h3>
+        <p>
+            Fast learner ⚡ with sharp analytical thinking 🧠 and a problem-solving mindset 🧩. Always curious 🔍, always exploring new tools 🛠 and technologies 💻 to stay ahead of the game.
+        </p>
+        
+        <h3>🤝 Teamwork & Dedication:</h3>
+        <p>
+            Strong team player 👥 with excellent communication skills 🗣. Committed to delivering real value ✅ and ensuring high-quality software 🖥. Eager to join a forward-thinking organization 🏢.
+        </p>
+
+    </div>
+</section>
+
+
+        <section class="features" id="skills-section">
+		
+            <h2 style="color: #8A2BE2;">My Advantages and Skills</h2>
+            <div class="feature-list">
+                
+                <div class="feature">
+                    <h3>⚙️ Technical Skills</h3>
+                    <ul class="hard-skills-list">
+                        <li>**Automation & Programming:** Foundational knowledge of **Python** for test scripting and experience with Automation Framework concepts.</li>
+                        <li>**Database Testing:** Proficient in writing and executing **SQL** queries (including Joins) for data validation.</li>
+                        <li>**API Testing:** Practical experience using **Postman** for API testing.</li>
+                        <li>**Test Management:** Strong command of the industry-standard tool, **JIRA**, for bug tracking and workflow management.</li>
+                        <li>**Web & Mobile Testing:** Expertise in both **Web Testing** (Chrome, Edge, Firefox) and **Mobile Testing** (iOS, Android).</li>
+                        <li>**Web Technologies:** Working knowledge of **HTML** and **CSS**, and experienced in using **DevTools** for debugging.</li>
+                        <li>**Methodologies:** Proven expertise in software development methodologies, including **Agile** and **Waterfall**.</li>
+                        <li>**Environment:** Solid experience working with the **Windows OS** platform.</li>
+                    </ul>
+                </div>
+
+                <div class="feature">
+                    <h3>❤️ Core Competencies</h3>
+                    <ul class="soft-skills-list">
+                        <li>**Analytical & Critical Thinking:** Strong analytical thinking, Exceptional attention to detail, and a keen problem-solving mindset.</li>
+                        <li>**Learning & Growth:** Fast and self-directed learner (Self-Learning), Highly curious, and proactive in exploring new tools and technologies (e.g., Python).</li>
+                        <li>**Communication & Collaboration:** Excellent written and verbal communication skills, Strong team player, and experience working within **Agile** methodologies.</li>
+                        <li>**Professional Discipline:** Highly independent, Self-disciplined, and proficient in prioritizing tasks and managing workload under pressure.</li>
+                        <li>**Commitment to Quality:** Dedicated to ensuring high-quality software delivery and focusing on optimal User Experience (UX).</li>
+                    </ul>
+                </div>
+
+                <div class="feature" id="projects-section"> <h3>Projects & Portfolio:</h3>
+                    <p>--- List (Coming Soon: Python Automation Project...)</p>
+                    <a href="#" target="_blank" class="project-link">View GitHub Repository</a>
+                </div>
+            </div>
         </section>
 
-        <section class="contact">
-            <section id="contact">
-                <h2>Reach Out</h2>
-            </section>
-			            <p>I will be happy to assist you and answer any questions.</p>
+        <section class="contact" id="contact">
+            <h2>Reach Out</h2>
+            <p>I will be happy to assist you and answer any questions.</p>
 
             <div class="social-icons">
-                <a href="https://wa.me/972506846286" target="_blank" rel="noopener noreferrer" class="whatsapp-icon"> <img src="images/wa.png" alt="וואטסאפ" width="102" height="102">
+                <a href="https://wa.me/972506846286" target="_blank" rel="noopener noreferrer" class="whatsapp-icon"> 
+                    <img src="images/wa.png" alt="וואטסאפ" width="102" height="102">
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/meir-yaakovi/" target="_blank" rel="noopener noreferrer">
@@ -126,7 +222,7 @@
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
-			
+            
             <p><h2>Or Leave Your Message Here:</h2></p>
             <form>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLjfaocG4aZftvPB6hsB0HKIpPhtJOKhcTyA_WzFcfdkxH6Q/viewform?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">בטעינה…</iframe>
@@ -137,6 +233,6 @@
     <footer>
         <p>&copy; 2025 All rights reserved</p>
     </footer>
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

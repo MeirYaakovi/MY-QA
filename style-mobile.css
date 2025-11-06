@@ -1,0 +1,59 @@
+/* ============================================== */
+/* style-mobile.css - כללים לרוחב מסך מקסימלי של 768 פיקסלים ומטה */
+/* ============================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. התאמת ריפוד ראשי (Main Padding) */
+    /* מפחית את הריפוד הגדול שמוגדר ב-style.css (150px) */
+    main {
+        padding: 50px 10px 10px 10px; 
+    }
+    
+    /* 2. תיקון מיקום וגודל תמונת הפרופיל */
+    /* מיקומי הפרופיל הקשיחים מבוטלים והוא ממוקם ב-Header הראשי */
+    .profile-image {
+        position: static; /* מבטל את ה-absolute positioning */
+        transform: none; /* מבטל את הקיזוז הקשיח */
+        width: 40px; 
+        height: 40px;
+        margin-right: 15px; /* רווח ליד השם */
+        border: 2px solid #FFD700;
+        box-shadow: none; /* מבטל את אפקט הנצנוץ במובייל */
+        transition: none;
+    }
+    
+    /* 3. סידור ניווט (Nav) אנכי */
+    /* זה אמור כבר להיות בקטע ה-style בתוך ה-HTML שלך, אבל נוודא: */
+    header {
+        flex-direction: column; /* מסדר את האלמנטים אנכית */
+        align-items: flex-start; /* מיישר את הכל לשמאל */
+        padding: 10px;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+    
+    /* 4. תיקון כרטיסי ה-Skills (Features) - הדבר שהכי "שובר" את העיצוב */
+    /* מוודא שכל כרטיס תופס שורה שלמה */
+    .feature-list {
+        flex-direction: column; /* מחליף לשורות אנכיות */
+    }
+    .feature {
+        flex-basis: 100%; /* תופס את כל הרוחב */
+        min-width: unset; /* מבטל את רוחב המינימום */
+        margin: 10px 0; /* מרווח אנכי בין הכרטיסים */
+    }
+    
+    /* 5. תיקון קיזוז גלילה (Offset) */
+    /* ה-Header במובייל נמוך יותר, לכן הקיזוז לגלילה צריך להיות קטן יותר מ-220px */
+    section, .hero, .contact, .feature {
+        scroll-margin-top: 130px; 
+    }
+    
+    /* 6. תיקון סמל ה-Footer */
+    footer {
+        padding: 0.5em 0;
+    }
+}
