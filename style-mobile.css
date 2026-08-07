@@ -4,6 +4,11 @@
 
 @media (max-width: 768px) {
 
+    /* 0. Bigger base font size across the whole mobile site */
+    html {
+        font-size: 130%;
+    }
+
     /* 1. Show/hide profile images */
     #desktop-profile-image {
         display: none;
@@ -66,9 +71,9 @@
         margin: 0.4em 0;
     }
 
-    /* 5. Main padding (must clear the fixed header: title + 5 stacked nav links) */
+    /* 5. Main padding (must clear the fixed header: photo + title + 5 stacked nav links) */
     main {
-        padding: 230px 12px 20px;
+        padding: 350px 12px 20px;
     }
 
     /* 6. Feature cards stack vertically */
@@ -85,7 +90,7 @@
 
     /* 7. Scroll offset for fixed header */
     section, .hero, .contact, .feature, .about-card {
-        scroll-margin-top: 220px;
+        scroll-margin-top: 340px;
     }
 
     /* 8. Contact iframe */
@@ -97,5 +102,20 @@
     /* 9. Footer */
     footer {
         padding: 0.5em 0;
+    }
+
+    /* 10. Every card grid stacks one below the other — no side-by-side columns */
+    .stat-row,
+    .chart-grid,
+    .mini-projects {
+        flex-direction: column;
+    }
+
+    .stat-chip,
+    .chart-grid a,
+    .mini-project-card {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
     }
 }
