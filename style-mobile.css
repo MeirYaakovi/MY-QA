@@ -30,7 +30,11 @@
         height: auto !important;
     }
 
-    header h1 {
+    .header-text {
+        display: block;
+    }
+
+    .header-text h1 {
         margin-left: 4rem;
         font-size: 1.5rem;
     }
@@ -125,5 +129,16 @@
     .report-cover-link img {
         width: 100%;
         height: auto;
+    }
+
+    /* 11. Social icons: three icons no longer fit the old 90px gap */
+    .social-icons {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .social-icons img {
+        width: 70px;
+        height: 70px;
     }
 }
