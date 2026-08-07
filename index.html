@@ -24,6 +24,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-section">About</a></li>
                 <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#netflix-section">Netflix Project</a></li>
                 <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -98,13 +99,95 @@
                     </ul>
                 </div>
 
-                <div class="feature" id="projects-section">
-                    <h3>🗂️ Projects &amp; Portfolio</h3>
-                    <p>Python Automation Project — <em>coming soon</em></p>
-                    <a href="https://github.com/MeirYaakovi" target="_blank" rel="noopener noreferrer" class="button">My GitHub Profile</a>
+            </div>
+        </section>
+
+        <section id="netflix-section" class="netflix-card">
+            <div class="netflix-header">
+                <h2>🎬 Netflix QA Project — Full Software Test Report</h2>
+                <p class="netflix-disclaimer">
+                    Independent, unofficial QA training &amp; portfolio project — not affiliated with, endorsed by,
+                    or sponsored by Netflix, Inc. Evidence screenshots are reduced/blurred and Security-category
+                    defects are fully redacted throughout the public report.
+                </p>
+            </div>
+
+            <div class="stat-row">
+                <div class="stat-chip"><strong>301</strong><span>Test Cases</span></div>
+                <div class="stat-chip"><strong>62.1%</strong><span>Pass Rate</span></div>
+                <div class="stat-chip"><strong>12</strong><span>Testing Disciplines</span></div>
+                <div class="stat-chip"><strong>54</strong><span>Defects Logged 1:1 to Jira</span></div>
+            </div>
+
+            <p>
+                A hands-on, end-to-end manual QA cycle against a Netflix-style streaming platform (web &amp; mobile):
+                301 documented test cases across twelve disciplines — Functional, UI/UX, Usability, Accessibility,
+                Localization, Security, Performance, Load, Survival, Recovery, Compatibility and Integration — executed
+                on desktop Chrome, a real Android device (Samsung Galaxy A56), and confirmatory passes on Firefox and Brave.
+                Every failed case produced exactly one traceable Jira defect, triaged by severity from Show-Stop down to Low.
+            </p>
+            <p>
+                The whole pipeline runs from a single Excel workbook (STD.xlsx), synced bi-directionally to
+                <strong>Jira</strong> and <strong>TestRail</strong> through two custom automation tools built specifically
+                for this project — <a href="#projects-section">STDimport and QA Evidence Auto-Watermark</a> — so every
+                test case, result and piece of evidence stays in sync across all three systems automatically.
+            </p>
+
+            <div class="chart-grid">
+                <a href="images/netflix/chart_status.png" target="_blank" rel="noopener noreferrer">
+                    <img src="images/netflix/chart_status.png" alt="Test execution status distribution — 301 test cases">
+                    <span>Execution Status</span>
+                </a>
+                <a href="images/netflix/chart_severity.png" target="_blank" rel="noopener noreferrer">
+                    <img src="images/netflix/chart_severity.png" alt="Defect severity breakdown chart">
+                    <span>Defect Severity</span>
+                </a>
+                <a href="images/netflix/chart_area.png" target="_blank" rel="noopener noreferrer">
+                    <img src="images/netflix/chart_area.png" alt="Test results by application area chart">
+                    <span>Results by Area</span>
+                </a>
+            </div>
+
+            <a href="files/NetflixCPM-STR-MeirYaakovi.pdf" target="_blank" rel="noopener noreferrer" class="button">
+                📄 View Full Report (PDF)
+            </a>
+        </section>
+
+        <section class="features" id="projects-section">
+            <h2>🗂️ Projects &amp; Portfolio</h2>
+            <p class="section-intro">
+                A few of the automation tools I've built to support my own QA work, alongside the rest of my repos on GitHub.
+            </p>
+
+            <div class="mini-projects">
+                <div class="mini-project-card">
+                    <img src="images/projects/stdimport.png" alt="STDimport desktop app screenshot">
+                    <h3>STDimport</h3>
+                    <p>Desktop app (PySide6) that syncs a QA results Excel workbook bi-directionally with Jira and
+                        TestRail — creates/updates/closes bugs, upserts test cases, uploads evidence, with pause/resume
+                        and network-loss resilience.</p>
+                    <span class="repo-badge">Private repo</span>
                 </div>
 
+                <div class="mini-project-card">
+                    <img src="images/projects/qa-watermark.png" alt="QA Evidence Auto Watermark desktop app screenshot">
+                    <h3>QA Evidence Auto Watermark</h3>
+                    <p>Desktop tool that reads bug metadata straight from an Excel STD file and automatically
+                        embeds severity-color-coded watermarks into screenshots and screen recordings — no more
+                        manual labeling of evidence.</p>
+                    <a href="https://github.com/MeirYaakovi/QA-Evidence-Auto-Watermark" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                </div>
+
+                <div class="mini-project-card">
+                    <h3>STR Builder</h3>
+                    <p>Compiles a complete Software Test Report (.docx) in one click from a test-results workbook and
+                        a live Jira defect pull — charts, color-coded tables, per-defect pages and a designed cover,
+                        fully generated automatically.</p>
+                    <span class="repo-badge">Private repo</span>
+                </div>
             </div>
+
+            <a href="https://github.com/MeirYaakovi" target="_blank" rel="noopener noreferrer" class="button">My GitHub Profile</a>
         </section>
 
         <section class="contact" id="contact">
