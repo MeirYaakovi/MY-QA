@@ -1,58 +1,100 @@
 /* ============================================== */
-/* style-mobile.css - כללים לרוחב מסך מקסימלי של 768 פיקסלים ומטה */
+/* style-mobile.css — max-width: 768px            */
 /* ============================================== */
 
 @media (max-width: 768px) {
-    
-    /* 1. התאמת ריפוד ראשי (Main Padding) */
-    /* מפחית את הריפוד הגדול שמוגדר ב-style.css (150px) */
-    main {
-        padding: 50px 10px 10px 10px; 
+
+    /* 1. Show/hide profile images */
+    #desktop-profile-image {
+        display: none;
     }
-    
-    /* 2. תיקון מיקום וגודל תמונת הפרופיל */
-    /* מיקומי הפרופיל הקשיחים מבוטלים והוא ממוקם ב-Header הראשי */
-    .profile-image {
-        position: static; /* מבטל את ה-absolute positioning */
-        transform: none; /* מבטל את הקיזוז הקשיח */
-        width: 40px; 
-        height: 40px;
-        margin-right: 15px; /* רווח ליד השם */
-        border: 2px solid #FFD700;
-        box-shadow: none; /* מבטל את אפקט הנצנוץ במובייל */
-        transition: none;
+    #mobile-profile-image {
+        display: block;
     }
-    
-    /* 3. סידור ניווט (Nav) אנכי */
-    /* זה אמור כבר להיות בקטע ה-style בתוך ה-HTML שלך, אבל נוודא: */
+
+    /* 2. Header layout */
     header {
-        flex-direction: column; /* מסדר את האלמנטים אנכית */
-        align-items: flex-start; /* מיישר את הכל לשמאל */
-        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto !important;
+    }
+
+    header h1 {
+        margin-left: 4rem;
+        font-size: 1.5rem;
+    }
+
+    /* 3. Profile image in header (small) */
+    .profile-image {
+        position: static;
+        transform: none;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        border: 2px solid #FFD700;
+        box-shadow: none;
+        animation: none;
+        transition: none;
+        /* Position it inside the flex row */
+        position: absolute;
+        top: 8px;
+        left: 10px;
+    }
+
+    .profile-image:hover {
+        transform: none;
+    }
+
+    /* 4. Nav */
+    nav {
+        margin-top: 0.5em;
     }
 
     nav ul {
         text-align: left;
+        padding-left: 0;
     }
-    
-    /* 4. תיקון כרטיסי ה-Skills (Features) - הדבר שהכי "שובר" את העיצוב */
-    /* מוודא שכל כרטיס תופס שורה שלמה */
+
+    nav ul li {
+        display: block;
+        margin: 0.4em 0;
+    }
+
+    /* 5. Main padding (must clear the fixed header: title + 5 stacked nav links) */
+    main {
+        padding: 230px 12px 20px;
+    }
+
+    /* 6. Feature cards stack vertically */
     .feature-list {
-        flex-direction: column; /* מחליף לשורות אנכיות */
+        flex-direction: column;
+        gap: 12px;
     }
+
     .feature {
-        flex-basis: 100%; /* תופס את כל הרוחב */
-        min-width: unset; /* מבטל את רוחב המינימום */
-        margin: 10px 0; /* מרווח אנכי בין הכרטיסים */
+        flex: 1 1 100%;
+        min-width: unset;
+        margin: 0;
     }
-    
-    /* 5. תיקון קיזוז גלילה (Offset) */
-    /* ה-Header במובייל נמוך יותר, לכן הקיזוז לגלילה צריך להיות קטן יותר מ-220px */
-    section, .hero, .contact, .feature {
-        scroll-margin-top: 130px; 
+
+    /* 7. Scroll offset for fixed header */
+    section, .hero, .contact, .feature, .about-card {
+        scroll-margin-top: 220px;
     }
-    
-    /* 6. תיקון סמל ה-Footer */
+
+    /* 8. Contact iframe */
+    .contact iframe {
+        width: 100%;
+        height: 600px;
+    }
+
+    /* 9. Footer */
     footer {
         padding: 0.5em 0;
     }
