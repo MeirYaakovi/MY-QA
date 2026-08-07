@@ -39,8 +39,8 @@
     .profile-image {
         position: static;
         transform: none;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin-right: 15px;
         border: 2px solid #FFD700;
         box-shadow: none;
@@ -107,15 +107,23 @@
     /* 10. Every card grid stacks one below the other — no side-by-side columns */
     .stat-row,
     .chart-grid,
-    .mini-projects {
+    .mini-projects,
+    .report-cta {
         flex-direction: column;
     }
 
     .stat-chip,
     .chart-grid a,
-    .mini-project-card {
+    .mini-project-card,
+    .report-button,
+    .report-cover-link {
         flex: 1 1 auto;
         max-width: 100%;
         width: 100%;
+    }
+
+    .report-cover-link img {
+        width: 100%;
+        height: auto;
     }
 }
