@@ -120,7 +120,8 @@
     .chart-grid a,
     .mini-project-card,
     .report-button,
-    .report-cover-link {
+    .report-cover-link,
+    .netflix-video {
         flex: 1 1 auto;
         max-width: 100%;
         width: 100%;
@@ -129,6 +130,10 @@
     .report-cover-link img {
         width: 100%;
         height: auto;
+    }
+
+    .netflix-video video {
+        width: 100%;
     }
 
     /* 11. Social icons: three icons no longer fit the old 90px gap */
