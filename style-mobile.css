@@ -75,9 +75,9 @@
         margin: 0.4em 0;
     }
 
-    /* 5. Main padding (must clear the fixed header: photo + title + 5 stacked nav links) */
+    /* 5. Main padding (must clear the fixed header: photo + title + 6 stacked nav links) */
     main {
-        padding: 350px 12px 20px;
+        padding: 400px 12px 20px;
     }
 
     /* 6. Feature cards stack vertically */

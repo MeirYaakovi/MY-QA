@@ -67,6 +67,10 @@ nav a:hover {
     opacity: 0.8;
 }
 
+nav a.nav-external {
+    font-weight: bold;
+}
+
 /* === SCROLL OFFSET (for fixed header) === */
 section, .hero, .contact, .feature, .about-card {
     scroll-margin-top: 260px;
@@ -431,6 +435,15 @@ main {
     background-color: #333;
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-button {
+    background-color: rgba(58, 3, 252, 0.9);
+    margin-right: 12px;
+}
+
+.portfolio-button:hover {
+    background-color: rgba(58, 3, 252, 1);
 }
 
 /* === VIDEO PLACEHOLDER (Projects section) === */
