@@ -248,6 +248,64 @@ main {
     color: #333;
 }
 
+/* === TOOL PROFICIENCY METER === */
+.meter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.meter-item {
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    padding: 16px 18px;
+}
+
+.meter-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.93em;
+    color: #333;
+    font-weight: bold;
+}
+
+.meter-score {
+    color: #8A2BE2;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.meter-score small {
+    color: #999;
+    font-weight: normal;
+}
+
+.meter-segments {
+    display: flex;
+    gap: 6px;
+}
+
+.seg {
+    flex: 1;
+    height: 10px;
+    border-radius: 4px;
+    background: #e6e6e6;
+}
+
+.seg.on {
+    background: linear-gradient(90deg, #00838f, #8A2BE2);
+}
+
+@media (max-width: 700px) {
+    .meter-grid { grid-template-columns: 1fr; }
+}
+
 /* === NETFLIX PROJECT === */
 .netflix-card {
     background-color: rgba(20, 20, 20, 0.93);
