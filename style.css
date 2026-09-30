@@ -674,3 +674,12 @@ footer {
     padding: 1em 0;
     text-align: center;
 }
+
+.case-study-link {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+.case-study-link a {
+    font-weight: 600;
+    white-space: nowrap;
+}
